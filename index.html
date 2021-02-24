@@ -1,46 +1,34 @@
-﻿<html>
-  <head>
-    <title>Allo Multinode</title>
-    <meta content="">
-    <style></style>
+﻿<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Attaque - Fin</title>
+    <script src="lib/MultiNode.js"></script>
+    <script defer src="Attaque.js"></script>
+</head>
+<body>
 
-    <script type="text/javascript" src="URLFacile.js"></script>
+    <form id="formulaire-authentification">
+        <fieldset>
+            <lable>Pseudonyme</lable>
+            <input type="text" id="champ-pseudonyme"/>
+            <input type="submit" value="Authentification" id="bouton-authentification"/>
+        </fieldset>
+    </form>
 
-    <script type="text/javascript" src="MultiNode.js"></script>
+    <form id="formulaire-jeu">
+        <fieldset>
+            <legend>Point de vie</legend>
+            <input type="text" id="champ-point-de-vie" value=""/>
+        </fieldset>
+        <input type="submit" value="Attaquer" id="bouton-attaquer"/>
+        <input type="text" id="champ-attaque"/>
 
-    <script type="text/javascript">
+        <fieldset >
+            <legend id="information-autre-joueur">Point de vie {nom-autre-joueur}</legend>
+            <input type="text" id="champ-point-de-vie-autre-joueur" value=""/>
+        </fieldset>
+    </form>
 
-        var url = new URLFacile();
-        var pseudonyme = url.get('pseudo');
-        console.log("pseudonyme = " + pseudonyme);
-
-        var serveurJeu = new MultiNode();
-
-        serveurJeu.confirmerConnexion = function(){
-            console.log("Je suis connecte.");
-            serveurJeu.demanderAuthentification(pseudonyme);
-            serveurJeu.posterVariableTextuelle("argent", "million");
-        }
-
-        serveurJeu.confirmerAuthentification = function(listePseudo){
-            console.log("Je suis authentifie.");
-            console.log("Les autres participants sont " + JSON.stringify(listePseudo));
-        }
-
-        serveurJeu.apprendreAuthentification = function(pseudonyme){
-            console.log("Nouvel ami " + pseudonyme);
-        }
-
-        serveurJeu.recevoirVariable = function(variable){
-            console.log("Surcharge de recevoirVariable " + variable.cle + " = " + variable.valeur);
-        }
-
-        serveurJeu.connecter();
-
-    </script>
-
-  </head>
-  <body>
-    <h1>Allo Multinode</h1>
-  </body>
+</body>
 </html>
