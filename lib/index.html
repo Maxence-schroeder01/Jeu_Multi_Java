@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Jeu MultiNode</title>
+    <script src="lib/MultiNode.js"></script>
+    <script defer src="Attaque.js"></script>
+</head>
+<body>
+
+    <form id="formulaire-authentification">
+        <fieldset>
+            <lable>Votre Pseudonyme</lable>
+            <input type="text" id="champ-pseudonyme"/>
+            <input type="submit" value="Authentification" id="bouton-authentification"/>
+        </fieldset>
+    </form>
+    <form id="formulaire-jeu">
+        <fieldset>
+            <legend>Vos Point</legend>
+            <input type="text" id="champ-point-de-vie-autre-joueur" value=""/>
+        </fieldset>
+        <br>
+        <input type="submit" value="Rouler les Dés de {nom-joueur} " id="bouton-attaquer"/>
+        <input type="text" id="champ-attaque"/>
+        <input type="submit" value="Rouler les Dés de {nom-autre-joueur} " id="bouton-attaquer-pl2"/>
+<br>
+        <fieldset >
+            <legend id="information-autre-joueur">Point de {nom-autre-joueur}</legend>
+            <input type="text" id="champ-point-de-vie" value=""/>
+        </fieldset>
+    </form>
+
+</body>
+</html>
