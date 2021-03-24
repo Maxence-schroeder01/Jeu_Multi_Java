@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<title>Attaque - Fin</title>
+	<title>Jeu MultiNode</title>
     <script src="lib/MultiNode.js"></script>
     <script defer src="Attaque.js"></script>
 </head>
@@ -10,22 +10,28 @@
 
     <form id="formulaire-authentification">
         <fieldset>
-            <lable>Pseudonyme</lable>
+            <lable>Votre Pseudonyme</lable>
             <input type="text" id="champ-pseudonyme"/>
             <input type="submit" value="Authentification" id="bouton-authentification"/>
         </fieldset>
     </form>
     <form id="formulaire-jeu">
         <fieldset>
-            <legend>Point de vie</legend>
-            <input type="text" id="champ-point-de-vie" value=""/>
-        </fieldset>
-        <input type="submit" value="Attaquer" id="bouton-attaquer"/>
-        <input type="text" id="champ-attaque"/>
-
-        <fieldset >
-            <legend id="information-autre-joueur">Point de vie {nom-autre-joueur}</legend>
+            <legend>Vos Point</legend>
             <input type="text" id="champ-point-de-vie-autre-joueur" value=""/>
+        </fieldset>
+        <br>
+        <legend id="information-joueur">les Dés de {nom-joueur}</legend>
+        <input type="submit" value="Rouler les Dés" id="bouton-attaquer"/>
+        <br>
+        <input type="text" id="champ-attaque"/>
+        <br>
+        <legend id="information-autre-joueur">les Dés de {nom-autre-joueur}</legend>
+        <input type="submit" value="Rouler les Dés " id="bouton-attaquer-pl2"/>
+<br>
+        <fieldset >
+            <legend id="information-autre-joueur">Point de {nom-autre-joueur}</legend>
+            <input type="text" id="champ-point-de-vie" value=""/>
         </fieldset>
     </form>
 

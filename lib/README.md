@@ -1,3 +1,0 @@
-# projet-initial
-
-Maxence Schroeder
